@@ -9,10 +9,11 @@ This is a simple quiz webapp created entirely in Pynecone.
 ## Link to product walkthrough
 [Demo video](https://www.loom.com/share/21785aee7b4c47a8993d26f509ea683c)
 ## Libraries used
-- python 3.10
+- python 3.7
 - pynecone
+- NodeJS 16.8
 ## How to configure
-- Installing
+- Installation
 ```
 $pip install pynecone
 ```
