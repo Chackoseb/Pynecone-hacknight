@@ -12,7 +12,7 @@ This is a simple quiz webapp created entirely in Pynecone.
 .python 3.10
 .pynecone
 ## How to configure
-.Installing
+#Installing
    $pip install pynecone
 .Create a project
    $ mkdir my_app_name
