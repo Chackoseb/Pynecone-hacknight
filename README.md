@@ -8,12 +8,15 @@ This is a simple quiz webapp created entirely in Pynecone.
 2. [Catherine Jose](https://github.com/cath0806)
 ## Link to product walkthrough
 [link to video](https://www.loom.com/share/21785aee7b4c47a8993d26f509ea683c)
-## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
 ## Libraries used
-Library Name - Version
+.python 3.10
+.pynecone
 ## How to configure
-Instructions for setting up project
+.Installing
+   $pip install pynecone
+.Create a project
+   $ mkdir my_app_name
+   $ cd my_app_name
+   $ pc init
 ## How to Run
-Instructions for running
+   $pc run
