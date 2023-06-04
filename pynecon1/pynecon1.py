@@ -1,4 +1,5 @@
 import pynecone as pc
+import time
 
 
 class State(pc.State):
@@ -7,50 +8,56 @@ class State(pc.State):
         "yellow",
         "yellow",
         "yellow",
+        "yellow",
     ]
 
     questions: list[str] = [
-        "Question 1",
-        "Question 2",
-        "Question 3",
-        "Question 4",
-        "Question 5",
+        "Who is father of computers?",
+        "Which of the following computer language is written in binary codes only?",
+        "Which of the following can access the server?",
+        "Which of the following is the first neural network computer?",
+        "Which of the following is a technique that marked the beginning of computer communications?",
+        "Thankyou For Participating",
     ] 
     qno=0
 
     optiona : list[str] = [
-        "answer1a",
-        "answer2a",
-        "answer3a",
-        "answer4a",
-        "answer5a",
+        "James Gosling",
+        "Machine language",
+        "User",
+        "AN",
+        "User Environment",
+        ".          Have            .",
     ]
     opa=0
 
     optionb : list[str] = [
-        "answer1b",
-        "answer2b",
-        "answer3b",
-        "answer4b",
-        "answer5b",
+        "Dennis Ritchie",
+        "pascal",
+        "Web Client",
+        "AM",
+        "Batch Environment",
+        ".           a               .",
     ]
     opb=0
 
     optionc : list[str] = [
-        "answer1c",
-        "answer2c",
-        "answer3c",
-        "answer4c",
-        "answer5c",
+        "Charles Babbage",
+        "C",
+        "Web Browser",
+        "RFD",
+        "Time Sharing",
+        ".         Nice              ."
     ]
     opc=0
 
     optiond : list[str] = [
-        "answer1d",
-        "answer2d",
-        "answer3d",
-        "answer4d",
-        "answer5d",
+        "Bjarne Stroustrup",
+        "C#",
+        "Web Server",
+        "SNARC",
+        "Message passing",
+        ".          Day              ."
     ]
     opd=0
 
@@ -60,6 +67,7 @@ class State(pc.State):
         "red",
         "red",
         "red",
+        "blue"
     ]
     clra=0
 
@@ -69,6 +77,7 @@ class State(pc.State):
         "green",
         "red",
         "red",
+        "blue"
     ]
     clrb=0
 
@@ -78,6 +87,7 @@ class State(pc.State):
         "red",
         "red",
         "green",
+        "blue"
     ]
     clrc=0
 
@@ -87,6 +97,7 @@ class State(pc.State):
         "red",
         "green",
         "red",
+        "blue",
     ]
     clrd=0
 
@@ -100,10 +111,21 @@ class State(pc.State):
         self.clrb += 1
         self.clrc += 1
         self.clrd += 1
+        if(self.qno==6):
+            pc.text("Quiz Over")
+            self.qno = 0
+            self.opa = 0
+            self.opb = 0
+            self.opc = 0
+            self.opd = 0
+            self.clra = 0
+            self.clrb = 0
+            self.clrc = 0
+            self.clrd = 0
         
-
     def change_color(self, color, index):
         self.colors[index] = color
+
 
 def index():
     
@@ -116,7 +138,6 @@ def index():
                 default_value="yellow",
                 on_click= State.change_color(State.colora[State.clra], 0),
                 bg=State.colors[0],
-                
             ),
             pc.button(
                 State.optionb[State.opb],
@@ -136,19 +157,28 @@ def index():
                 on_click= State.change_color(State.colord[State.clrd], 3),
                 bg=State.colors[3],
             ),
+
+            
         ),
         pc.button(
-            "NEXT",
-            border_radius="1em",
-            box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
-            background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
-            box_sizing="border-box",
-            color="white",
-            _hover={
-                "opacity": 0.85,
-            },
-            on_click=State.increment,
-        )
+                "NEXT",
+                border_radius="1em",
+                box_shadow="rgba(151, 65, 252, 0.8) 0 15px 30px -10px",
+                background_image="linear-gradient(144deg,#AF40FF,#5B42F3 50%,#00DDEB)",
+                box_sizing="border-box",
+                color="white",
+                _hover={
+                    "opacity": 0.85,
+                },
+                on_click=[
+                    State.increment,
+                    State.change_color("yellow",0),
+                    State.change_color("yellow",1),
+                    State.change_color("yellow",2),
+                    State.change_color("yellow",3)
+                ]    
+            )
+        
     )
 
 
