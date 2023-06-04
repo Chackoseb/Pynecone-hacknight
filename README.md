@@ -9,14 +9,14 @@ This is a simple quiz webapp created entirely in Pynecone.
 ## Link to product walkthrough
 [link to video](https://www.loom.com/share/21785aee7b4c47a8993d26f509ea683c)
 ## Libraries used
-### python 3.10
-### pynecone
+- python 3.10
+- pynecone
 ## How to configure
-### Installing
+- Installing
    ```
    $pip install pynecone
    ```
-### Create a project
+- Create a project
    ```
    $ mkdir my_app_name
    $ cd my_app_name
