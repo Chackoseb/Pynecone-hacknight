@@ -13,16 +13,16 @@ This is a simple quiz webapp created entirely in Pynecone.
 - pynecone
 ## How to configure
 - Installing
-```
+`
 $pip install pynecone
-```
+`
 - Create a project
-```
+`
 $ mkdir my_app_name
 $ cd my_app_name
 $ pc init
-```
+`
 ## How to Run
-```
+`
 $pc run
-```
+`
