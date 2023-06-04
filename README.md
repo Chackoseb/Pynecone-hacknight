@@ -7,7 +7,7 @@ This is a simple quiz webapp created entirely in Pynecone.
 1. [Chackochan Sebastian](https://github.com/Chackoseb)
 2. [Catherine Jose](https://github.com/cath0806)
 ## Link to product walkthrough
-[link to video](Link Here)
+[link to video](https://www.loom.com/share/21785aee7b4c47a8993d26f509ea683c)
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
